@@ -39,7 +39,21 @@ $(document).ready(function(){
 
         })
 
-    })
+    });
+
+    $('#submitForGit').click(function(){
+        let user = $('#inputForGit').val();
+        $.ajax({
+            
+            type:'GET',
+            url: `https://api.github.com/users/${user}`,
+
+            success: function(data){
+                console.table(data);
+            }
+
+        });
+    });
 
 });
 
