@@ -9,7 +9,7 @@ $(document).ready(function(){
             
             success: function(data){
                 let title = this.title
-                //let character = title.includes(entry);
+                
                 for(let i of data){
                     let character = i.title.includes(entry);
                     if(character){
